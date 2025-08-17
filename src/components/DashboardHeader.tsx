@@ -30,7 +30,7 @@ export function DashboardHeader() {
           <Settings className="h-5 w-5" />
         </Button>
         <Avatar className="h-10 w-10 hover-scale">
-          <AvatarImage src="/lovable-uploads/eec2d1f6-d9cc-44f5-8a41-e7410dcb4ff6.png" />
+          <AvatarImage src="/lovable-uploads/c4885ec0-7adb-40ad-aaaa-96bd95d6eaf5.png" />
           <AvatarFallback>JD</AvatarFallback>
         </Avatar>
       </div>
