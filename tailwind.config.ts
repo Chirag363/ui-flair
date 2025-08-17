@@ -61,6 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				metric: {
+					active: 'hsl(var(--metric-active))',
+					progress: 'hsl(var(--metric-progress))',
+					finished: 'hsl(var(--metric-finished))',
+					leads: 'hsl(var(--metric-leads))'
+				},
+				chart: {
+					active: 'hsl(var(--chart-active))',
+					progress: 'hsl(var(--chart-progress))',
+					finished: 'hsl(var(--chart-finished))',
+					leads: 'hsl(var(--chart-leads))'
 				}
 			},
 			borderRadius: {
