@@ -36,15 +36,11 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 180 84% 47%;
 
-    /* Metric colors - from specifications */
-    --metric-active: 217 91% 60%;  /* Blue #3860E4 */
+    /* Metric colors - matching the image design */
+    --metric-active: 217 91% 60%;  /* Blue */
     --metric-progress: 25 95% 53%; /* Orange */
-    --metric-finished: 142 76% 47%; /* Green #1DBF73 */
+    --metric-finished: 142 76% 36%; /* Green */
     --metric-leads: 271 81% 56%; /* Purple */
-    
-    /* Card styling variables */
-    --card-border: 243 18% 93%; /* #F3F6F7 */
-    --text-gradient: 215 27% 15%; /* #161922 */
 
     --radius: 0.5rem;
 
