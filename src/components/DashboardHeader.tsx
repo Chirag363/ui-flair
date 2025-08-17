@@ -17,14 +17,18 @@ export function DashboardHeader() {
       <div 
         className="flex items-center gap-1 sm:gap-3 flex-shrink-0 rounded-lg p-2"
         style={{
-          background: 'linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(206.34deg, rgba(255, 255, 255, 0.5) 40.99%, rgba(239, 239, 239, 0.35) 83.87%)'
+          background: 'linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(206.34deg, rgba(255, 255, 255, 0.5) 40.99%, rgba(239, 239, 239, 0.35) 83.87%)',
+          border: '0.81px solid #E1E6EA'
         }}
       >
         <Button 
           variant="ghost" 
           size="icon" 
           className="text-muted-foreground hover-scale h-8 w-8 sm:h-10 sm:w-10"
-          style={{ border: '0.81px solid #E1E6EA' }}
+          style={{
+            background: 'linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(206.34deg, rgba(255, 255, 255, 0.5) 40.99%, rgba(239, 239, 239, 0.35) 83.87%)',
+            border: '0.81px solid #E1E6EA'
+          }}
         >
           <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
         </Button>
@@ -32,10 +36,20 @@ export function DashboardHeader() {
           variant="ghost" 
           size="icon" 
           className="text-muted-foreground hover-scale h-8 w-8 sm:h-10 sm:w-10"
+          style={{
+            background: 'linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(206.34deg, rgba(255, 255, 255, 0.5) 40.99%, rgba(239, 239, 239, 0.35) 83.87%)',
+            border: '0.81px solid #E1E6EA'
+          }}
         >
           <Settings className="h-4 w-4 sm:h-5 sm:w-5" />
         </Button>
-        <Avatar className="h-8 w-8 sm:h-10 sm:w-10 hover-scale">
+        <Avatar 
+          className="h-8 w-8 sm:h-10 sm:w-10 hover-scale"
+          style={{
+            background: 'linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(206.34deg, rgba(255, 255, 255, 0.5) 40.99%, rgba(239, 239, 239, 0.35) 83.87%)',
+            border: '0.81px solid #E1E6EA'
+          }}
+        >
           <AvatarImage src="/lovable-uploads/c4885ec0-7adb-40ad-aaaa-96bd95d6eaf5.png" />
           <AvatarFallback>JD</AvatarFallback>
         </Avatar>
