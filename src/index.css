@@ -130,3 +130,24 @@ All colors MUST be HSL.
     transform: translateY(0);
   }
 }
+
+/* Mini chart gradient backgrounds */
+.bg-gradient-radial-blue {
+  background: radial-gradient(125% 125% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #3860E4;
+  background-blend-mode: overlay, normal;
+}
+
+.bg-gradient-radial-orange {
+  background: radial-gradient(125% 125% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #FF8C00;
+  background-blend-mode: overlay, normal;
+}
+
+.bg-gradient-radial-green {
+  background: radial-gradient(125% 125% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #1DBF73;
+  background-blend-mode: overlay, normal;
+}
+
+.bg-gradient-radial-purple {
+  background: radial-gradient(125% 125% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #8B5CF6;
+  background-blend-mode: overlay, normal;
+}
