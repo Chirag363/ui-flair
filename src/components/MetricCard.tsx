@@ -21,8 +21,7 @@ export function MetricCard({
   return (
     <div
       className={cn(
-        "bg-card rounded-xl p-6 border border-border shadow-sm",
-        "hover:shadow-md transition-all duration-300 hover-scale",
+        "bg-card metric-card-custom transition-all duration-300 hover-scale",
         "animate-fade-in",
         className
       )}

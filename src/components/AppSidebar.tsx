@@ -20,7 +20,7 @@ export function AppSidebar() {
   const isActive = (path: string) => currentPath === path;
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" className="sidebar-custom w-[230px] h-[731px]">
       <SidebarContent>
         {/* Logo */}
         <div 

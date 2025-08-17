@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
+    --background: 0 0% 99%;
     --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
@@ -36,6 +36,21 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 180 84% 47%;
 
+    /* Dashboard glassmorphic design */
+    --dashboard-background: 0 0% 99%;
+    --dashboard-border: 0 0% 100% / 0.3;
+    --dashboard-shadow: 0deg 0% 92% / 0.25, 0deg 0% 92%, 210deg 10% 84% / 0.4, 210deg 10% 84% / 0.27, 210deg 10% 84% / 0.6, 0deg 0% 100% / 0.3, 210deg 6% 66%, 210deg 10% 84% / 0.5;
+
+    /* Sidebar styling */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 210 18% 89%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
     /* Metric colors */
     --metric-active: 220 91% 64%;
     --metric-progress: 25 95% 53%;
@@ -48,23 +63,12 @@ All colors MUST be HSL.
     --chart-finished: 142 76% 95%;
     --chart-leads: 271 81% 95%;
 
+    /* Card styling */
+    --card-border: 210 20% 95%;
+    --card-shadow-inset: 0deg 0% 100% / 0.6;
+    --card-shadow-outer: 0deg 6% 6% / 0.16;
+
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -119,5 +123,37 @@ All colors MUST be HSL.
 @layer utilities {
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .dashboard-container {
+    background: hsl(var(--dashboard-background));
+    border: 11px solid hsla(var(--dashboard-border));
+    box-shadow: 
+      0px 7.33px 14.65px -2.93px hsla(var(--dashboard-shadow)),
+      0px 7.33px 14.65px -2.93px hsl(234 4% 92%),
+      inset 0px -2.93px 0.73px hsla(210 10% 84% / 0.4),
+      inset 1.47px 1.47px 0.73px hsla(210 10% 84% / 0.27),
+      inset 0px -1.47px 0.73px hsla(210 10% 84% / 0.6),
+      inset 1.47px 1.47px 1.47px hsla(0 0% 100% / 0.3),
+      inset 0px 0px 2.93px hsl(210 6% 66%),
+      inset 0px 0px 1.47px hsla(210 10% 84% / 0.5);
+    backdrop-filter: blur(47.02px);
+    border-radius: 20px;
+  }
+
+  .sidebar-custom {
+    background: hsl(var(--sidebar-background));
+    border-right: 0.81px solid hsl(var(--sidebar-border));
+    box-shadow: 1px 0px 2px 0px hsla(0 0% 0% / 0.06);
+  }
+
+  .metric-card-custom {
+    border-radius: 12.96px;
+    border: 0.81px solid hsl(var(--card-border));
+    box-shadow: 
+      0px -3.15px 3.15px 0px hsla(var(--card-shadow-inset)) inset,
+      0px 1.58px 2.36px 0px hsla(var(--card-shadow-outer));
+    backdrop-filter: blur(3.94px);
+    padding: 19.44px;
   }
 }
