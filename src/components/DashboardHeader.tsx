@@ -24,6 +24,7 @@ export function DashboardHeader() {
           variant="ghost" 
           size="icon" 
           className="text-muted-foreground hover-scale h-8 w-8 sm:h-10 sm:w-10"
+          style={{ border: '0.81px solid #E1E6EA' }}
         >
           <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
         </Button>
