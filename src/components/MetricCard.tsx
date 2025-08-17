@@ -21,19 +21,19 @@ export function MetricCard({
   return (
     <div
       className={cn(
-        "bg-white rounded-2xl p-6 border border-gray-100 shadow-sm relative",
+        "bg-white rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-sm relative",
         "hover:shadow-md transition-all duration-300",
-        "animate-fade-in",
+        "animate-fade-in min-h-[120px] sm:min-h-[140px]",
         className
       )}
     >
       {/* Title */}
-      <h3 className="text-sm font-medium text-gray-600 mb-3">
+      <h3 className="text-xs sm:text-sm font-medium text-gray-600 mb-2 sm:mb-3">
         {title}
       </h3>
       
       {/* Trend indicator */}
-      <div className="mb-6">
+      <div className="mb-3 sm:mb-6">
         <TrendIndicator
           change={change}
           trend={trend}
@@ -42,12 +42,12 @@ export function MetricCard({
       </div>
 
       {/* Value */}
-      <div className="mb-4">
-        <span className="text-4xl font-bold text-gray-900">{value}</span>
+      <div className="mb-3 sm:mb-4">
+        <span className="text-2xl sm:text-4xl font-bold text-gray-900">{value}</span>
       </div>
 
       {/* Mini chart positioned at bottom right */}
-      <div className="absolute bottom-6 right-6">
+      <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6">
         <MiniChart
           bars={styles.bars}
           colorClass={styles.color}

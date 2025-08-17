@@ -11,14 +11,16 @@ export function Dashboard() {
         <AppSidebar />
 
         <div className="flex-1 flex flex-col">
-          <header className="bg-card border-b border-border px-6 py-3 flex items-center">
+          <header className="bg-card border-b border-border px-3 sm:px-6 py-3 flex items-center">
+            {/* Mobile sidebar trigger */}
+            <SidebarTrigger className="md:hidden mr-3" />
             <div className="flex-1">
               <DashboardHeader />
             </div>
           </header>
 
-          <main className="flex-1 p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <main className="flex-1 p-3 sm:p-6 lg:p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
               {metricsData.map((metric, index) => (
                 <MetricCard
                   key={metric.title}
