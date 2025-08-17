@@ -11,8 +11,7 @@ export function Dashboard() {
         <AppSidebar />
 
         <div className="flex-1 flex flex-col">
-          <header className="bg-card border-b border-border px-4 py-3 flex items-center">
-            <SidebarTrigger className="mr-4" />
+          <header className="bg-card border-b border-border px-6 py-3 flex items-center">
             <div className="flex-1">
               <DashboardHeader />
             </div>

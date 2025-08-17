@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { navigationItems } from "@/constants/navigation";
+import { CustomSidebarTrigger } from "./CustomSidebarTrigger";
 import {
   Sidebar,
   SidebarContent,
@@ -20,8 +21,9 @@ export function AppSidebar() {
   const isActive = (path: string) => currentPath === path;
 
   return (
-    <Sidebar collapsible="icon" className="w-[230px] border-r border-border">
-      <SidebarContent className="bg-card">
+    <div className="relative">
+      <Sidebar collapsible="icon" className="w-[230px] border-r border-border">
+        <SidebarContent className="bg-card">
         {/* Logo */}
         <div className="px-6 py-4 border-b border-border">
           {!isCollapsed ? (
@@ -72,5 +74,9 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
+    
+    {/* Custom Toggle Button */}
+    <CustomSidebarTrigger />
+  </div>
   );
 }
