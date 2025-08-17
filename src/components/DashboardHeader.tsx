@@ -5,31 +5,31 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export function DashboardHeader() {
   return (
     <div className="flex items-center justify-between w-full">
-      <div className="animate-fade-in">
-        <h1 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-1">
+      <div>
+        <h1 className="text-2xl font-semibold text-gray-900 mb-1">
           Welcome back, Julie 👋
         </h1>
-        <p className="text-gray-600 text-sm lg:text-base">
+        <p className="text-gray-500 text-sm">
           Here's what you need to focus on today
         </p>
       </div>
 
-      <div className="flex items-center gap-2 lg:gap-3">
+      <div className="flex items-center gap-3">
         <Button 
           variant="ghost" 
           size="icon" 
-          className="text-gray-500 hover:text-gray-700"
+          className="text-gray-400 hover:text-gray-600"
         >
           <Mail className="h-5 w-5" />
         </Button>
         <Button 
           variant="ghost" 
           size="icon" 
-          className="text-gray-500 hover:text-gray-700"
+          className="text-gray-400 hover:text-gray-600"
         >
           <Settings className="h-5 w-5" />
         </Button>
-        <Avatar className="h-8 w-8 lg:h-10 lg:w-10">
+        <Avatar className="h-10 w-10">
           <AvatarImage src="/lovable-uploads/eec2d1f6-d9cc-44f5-8a41-e7410dcb4ff6.png" />
           <AvatarFallback>JD</AvatarFallback>
         </Avatar>

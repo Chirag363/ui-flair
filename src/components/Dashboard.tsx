@@ -11,20 +11,16 @@ export function Dashboard() {
         <AppSidebar />
 
         <div className="flex-1 flex flex-col">
-          <header className="bg-white px-6 py-4 flex items-center justify-between border-b">
-            <div className="flex items-center">
-              <SidebarTrigger className="mr-4 lg:hidden" />
-              <DashboardHeader />
-            </div>
+          <header className="bg-white px-8 py-6 border-b border-gray-100">
+            <DashboardHeader />
           </header>
 
-          <main className="flex-1 p-6 lg:p-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-7xl">
+          <main className="flex-1 p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {metricsData.map((metric, index) => (
                 <MetricCard
                   key={metric.title}
                   {...metric}
-                  className="animate-fade-in"
                 />
               ))}
             </div>
