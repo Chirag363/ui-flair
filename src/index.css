@@ -126,18 +126,21 @@ All colors MUST be HSL.
   }
 
   .dashboard-container {
-    background: hsl(var(--dashboard-background));
-    border: 11px solid hsla(var(--dashboard-border));
+    position: relative;
+    width: 1403px;
+    height: 735px;
+    background: #FCFCFC;
+    border: 11px solid rgba(255, 255, 255, 0.3);
     box-shadow: 
-      0px 7.33px 14.65px -2.93px hsla(var(--dashboard-shadow)),
-      0px 7.33px 14.65px -2.93px hsl(234 4% 92%),
-      inset 0px -2.93px 0.73px hsla(210 10% 84% / 0.4),
-      inset 1.47px 1.47px 0.73px hsla(210 10% 84% / 0.27),
-      inset 0px -1.47px 0.73px hsla(210 10% 84% / 0.6),
-      inset 1.47px 1.47px 1.47px hsla(0 0% 100% / 0.3),
-      inset 0px 0px 2.93px hsl(210 6% 66%),
-      inset 0px 0px 1.47px hsla(210 10% 84% / 0.5);
-    backdrop-filter: blur(47.02px);
+      0px 7.32625px 14.6525px -2.9305px rgba(234, 235, 237, 0.25), 
+      0px 7.32625px 14.6525px -2.9305px #EAEBED, 
+      inset 0px -2.9305px 0.732625px rgba(204, 206, 215, 0.4), 
+      inset 1.46525px 1.46525px 0.732625px rgba(204, 206, 215, 0.27), 
+      inset 0px -1.46525px 0.732625px rgba(204, 206, 215, 0.6), 
+      inset 1.46525px 1.46525px 1.46525px rgba(255, 255, 255, 0.3), 
+      inset 0px 0px 2.9305px #9FA1A8, 
+      inset 0px 0px 1.46525px rgba(204, 206, 215, 0.5);
+    backdrop-filter: blur(47.0245px);
     border-radius: 20px;
   }
 
