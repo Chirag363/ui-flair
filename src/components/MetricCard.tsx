@@ -19,10 +19,16 @@ export function MetricCard({
   const styles = metricStyles[type];
 
   return (
-    <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+    <div
+      className={cn(
+        "bg-card metric-card-custom transition-all duration-300 hover-scale",
+        "animate-fade-in",
+        className
+      )}
+    >
       <div className="flex items-start justify-between mb-4">
-        <div className="flex-1">
-          <h3 className="text-sm font-medium text-gray-500 mb-2">
+        <div>
+          <h3 className="text-sm font-medium text-muted-foreground mb-1">
             {title}
           </h3>
           <TrendIndicator
@@ -31,18 +37,17 @@ export function MetricCard({
             colorClass={styles.color}
           />
         </div>
-        <div className="ml-4">
-          <MiniChart
-            bars={styles.bars}
-            colorClass={styles.color}
-            chartBgClass="bg-transparent"
-          />
-        </div>
       </div>
 
-      <div className="mt-3">
-        <span className="text-3xl font-bold text-gray-900">{value}</span>
+      <div className="mb-4">
+        <span className="text-3xl font-bold text-foreground">{value}</span>
       </div>
+
+      <MiniChart
+        bars={styles.bars}
+        colorClass={styles.color}
+        chartBgClass={styles.chart}
+      />
     </div>
   );
 }
