@@ -7,18 +7,18 @@ interface MiniChartProps {
 
 export function MiniChart({ bars, colorClass }: MiniChartProps) {
   return (
-    <div className="flex items-end gap-1 h-12">
+    <div className="flex flex-row items-end gap-[3.24px] w-[42.13px] h-[28.36px]">
       {bars.map((height, index) => (
         <div
           key={index}
-          className={cn(
-            "rounded-sm transition-all duration-300",
-            colorClass.replace('text-', 'bg-')
-          )}
+          className="rounded-t-[1.62037px] transition-all duration-300"
           style={{
-            height: `${(height / 100) * 40}px`,
-            width: "3px",
+            width: '3.24px',
+            height: `${(height / 100) * 28.36}px`,
+            background: 'radial-gradient(125% 125% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #3860E4',
+            backgroundBlendMode: 'overlay, normal',
             animationDelay: `${index * 50}ms`,
+            flexGrow: 1,
           }}
         />
       ))}
