@@ -14,7 +14,12 @@ export function DashboardHeader() {
         </p>
       </div>
 
-      <div className="flex items-center gap-1 sm:gap-3 flex-shrink-0">
+      <div 
+        className="flex items-center gap-1 sm:gap-3 flex-shrink-0 rounded-lg p-2"
+        style={{
+          background: 'linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(206.34deg, rgba(255, 255, 255, 0.5) 40.99%, rgba(239, 239, 239, 0.35) 83.87%)'
+        }}
+      >
         <Button 
           variant="ghost" 
           size="icon" 
