@@ -12,20 +12,14 @@ export function TrendIndicator({ change, trend, colorClass }: TrendIndicatorProp
 
   return (
     <div className="flex items-center gap-2">
-      <span
-        className={cn(
-          "text-xs px-2 py-1 rounded-full transition-colors",
-          colorClass,
-          "bg-opacity-10"
-        )}
-      >
-        {isPositive ? "+" : ""}{change}
-      </span>
       {isPositive ? (
-        <TrendingUp className="h-3 w-3 text-emerald-500" />
+        <TrendingUp className={cn("h-4 w-4", colorClass)} />
       ) : (
-        <TrendingDown className="h-3 w-3 text-red-500" />
+        <TrendingDown className={cn("h-4 w-4", colorClass)} />
       )}
+      <span className={cn("text-sm font-medium", colorClass)}>
+        {isPositive ? "+" : "-"}{change}
+      </span>
     </div>
   );
 }

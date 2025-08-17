@@ -36,17 +36,11 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 180 84% 47%;
 
-    /* Metric colors */
-    --metric-active: 220 91% 64%;
-    --metric-progress: 25 95% 53%;
-    --metric-finished: 142 76% 36%;
-    --metric-leads: 271 81% 56%;
-
-    /* Chart backgrounds */
-    --chart-active: 220 91% 95%;
-    --chart-progress: 25 95% 95%;
-    --chart-finished: 142 76% 95%;
-    --chart-leads: 271 81% 95%;
+    /* Metric colors - matching the image design */
+    --metric-active: 217 91% 60%;  /* Blue */
+    --metric-progress: 25 95% 53%; /* Orange */
+    --metric-finished: 142 76% 36%; /* Green */
+    --metric-leads: 271 81% 56%; /* Purple */
 
     --radius: 0.5rem;
 
@@ -119,5 +113,20 @@ All colors MUST be HSL.
 @layer utilities {
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

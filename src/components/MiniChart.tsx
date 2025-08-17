@@ -3,22 +3,21 @@ import { cn } from "@/lib/utils";
 interface MiniChartProps {
   bars: number[];
   colorClass: string;
-  chartBgClass: string;
 }
 
-export function MiniChart({ bars, colorClass, chartBgClass }: MiniChartProps) {
+export function MiniChart({ bars, colorClass }: MiniChartProps) {
   return (
-    <div className={cn("rounded-lg p-3 flex items-end justify-center gap-1 h-16", chartBgClass)}>
+    <div className="flex items-end gap-1 h-12">
       {bars.map((height, index) => (
         <div
           key={index}
           className={cn(
-            "rounded-sm transition-all duration-300 hover:scale-110",
+            "rounded-sm transition-all duration-300",
             colorClass.replace('text-', 'bg-')
           )}
           style={{
             height: `${(height / 100) * 40}px`,
-            width: "4px",
+            width: "3px",
             animationDelay: `${index * 50}ms`,
           }}
         />

@@ -33,23 +33,19 @@ export const metricsData: MetricData[] = [
 
 export const metricStyles = {
   active: {
-    color: "text-metric-active",
-    chart: "bg-chart-active",
-    bars: [60, 80, 40, 90, 70, 50, 85] as number[],
+    color: "text-blue-500",
+    bars: [40, 60, 30, 80, 50, 70, 45] as number[],
   },
   progress: {
-    color: "text-metric-progress",
-    chart: "bg-chart-progress",
-    bars: [40, 60, 80, 30, 70, 90, 45] as number[],
+    color: "text-orange-500",
+    bars: [50, 40, 70, 35, 60, 80, 30] as number[],
   },
   finished: {
-    color: "text-metric-finished",
-    chart: "bg-chart-finished",
-    bars: [70, 45, 85, 60, 90, 40, 75] as number[],
+    color: "text-green-500",
+    bars: [60, 35, 75, 50, 80, 45, 70] as number[],
   },
   leads: {
-    color: "text-metric-leads",
-    chart: "bg-chart-leads",
-    bars: [50, 90, 30, 80, 45, 70, 95] as number[],
+    color: "text-purple-500",
+    bars: [45, 80, 25, 70, 40, 65, 85] as number[],
   },
 };
