@@ -8,13 +8,17 @@ interface MiniChartProps {
 
 export function MiniChart({ bars, colorClass, chartBgClass }: MiniChartProps) {
   return (
-    <div className="flex items-end gap-[3.24px] w-[42.13px] h-[28.36px]">
+    <div className={cn("rounded-lg p-3 flex items-end justify-center gap-1 h-16", chartBgClass)}>
       {bars.map((height, index) => (
         <div
           key={index}
-          className="chart-column flex-1"
+          className={cn(
+            "rounded-sm transition-all duration-300 hover:scale-110",
+            colorClass.replace('text-', 'bg-')
+          )}
           style={{
-            height: `${(height / 100) * 28.36}px`,
+            height: `${(height / 100) * 40}px`,
+            width: "4px",
             animationDelay: `${index * 50}ms`,
           }}
         />

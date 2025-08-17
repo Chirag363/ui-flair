@@ -21,40 +21,34 @@ export function MetricCard({
   return (
     <div
       className={cn(
-        "metric-card-custom transition-all duration-300 hover-scale",
+        "bg-card rounded-xl p-6 border border-border shadow-sm",
+        "hover:shadow-md transition-all duration-300 hover-scale",
         "animate-fade-in",
         className
       )}
     >
-      <div className="flex flex-col justify-center items-start flex-1">
-        {/* Title */}
-        <h3 className="metric-text-gradient font-medium text-[11.34px] leading-[18px] mb-1">
-          {title}
-        </h3>
-
-        {/* Trend Stack */}
-        <div className="flex items-center gap-[6.48px] py-[6.48px] mb-2">
+      <div className="flex items-start justify-between mb-4">
+        <div>
+          <h3 className="text-sm font-medium text-muted-foreground mb-1">
+            {title}
+          </h3>
           <TrendIndicator
             change={change}
             trend={trend}
             colorClass={styles.color}
           />
         </div>
-
-        {/* Value */}
-        <span className="metric-text-gradient font-bold text-[25.93px] leading-8">
-          {value}
-        </span>
       </div>
 
-      {/* Chart Section */}
-      <div className="flex flex-col items-end pb-[6.48px]">
-        <MiniChart
-          bars={styles.bars}
-          colorClass={styles.color}
-          chartBgClass={styles.chart}
-        />
+      <div className="mb-4">
+        <span className="text-3xl font-bold text-foreground">{value}</span>
       </div>
+
+      <MiniChart
+        bars={styles.bars}
+        colorClass={styles.color}
+        chartBgClass={styles.chart}
+      />
     </div>
   );
 }

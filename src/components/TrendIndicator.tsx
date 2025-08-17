@@ -11,20 +11,21 @@ export function TrendIndicator({ change, trend, colorClass }: TrendIndicatorProp
   const isPositive = trend === "up";
 
   return (
-    <div className="flex items-center gap-0">
-      <div className="trend-icon">
-        {isPositive ? (
-          <TrendingUp className="h-[12.96px] w-[12.96px]" />
-        ) : (
-          <TrendingDown className="h-[12.96px] w-[12.96px]" />
+    <div className="flex items-center gap-2">
+      <span
+        className={cn(
+          "text-xs px-2 py-1 rounded-full transition-colors",
+          colorClass,
+          "bg-opacity-10"
         )}
-      </div>
-      
-      <div className="flex items-center ml-[6.48px]">
-        <span className="metric-text-gradient font-medium text-[10.53px] leading-[18px] opacity-60">
-          {isPositive ? "+" : ""}{change}
-        </span>
-      </div>
+      >
+        {isPositive ? "+" : ""}{change}
+      </span>
+      {isPositive ? (
+        <TrendingUp className="h-3 w-3 text-emerald-500" />
+      ) : (
+        <TrendingDown className="h-3 w-3 text-red-500" />
+      )}
     </div>
   );
 }
