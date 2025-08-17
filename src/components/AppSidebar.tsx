@@ -22,7 +22,7 @@ export function AppSidebar() {
 
   return (
     <div className="relative">
-      <Sidebar collapsible="icon" className="w-[230px] border-r border-border">
+      <Sidebar collapsible="icon" className="border-r border-border">
         <SidebarContent className="bg-card">
         {/* Logo */}
         <div className="px-6 py-4 border-b border-border">
