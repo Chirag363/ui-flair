@@ -20,16 +20,10 @@ export function AppSidebar() {
   const isActive = (path: string) => currentPath === path;
 
   return (
-    <Sidebar collapsible="icon" className="sidebar-custom w-[230px] h-[731px]">
+    <Sidebar collapsible="icon" className="bg-white border-r border-gray-200">
       <SidebarContent>
         {/* Logo */}
-        <div 
-          className="p-6 border-b border-border flex items-center justify-center"
-          style={{
-            width: '164px',
-            height: '55px',
-          }}
-        >
+        <div className="p-6 border-b border-gray-100 flex items-center justify-center h-16">
           {!isCollapsed ? (
             <div 
               className="animate-fade-in font-harabara leading-none text-center opacity-100"
@@ -69,8 +63,8 @@ export function AppSidebar() {
                     asChild
                     className={
                       isActive(item.url)
-                        ? "bg-primary text-primary-foreground"
-                        : "hover:bg-accent hover:text-accent-foreground transition-colors"
+                        ? "bg-blue-50 text-blue-600 border-r-2 border-blue-600"
+                        : "hover:bg-gray-50 text-gray-700 transition-colors"
                     }
                   >
                     <a href={item.url} className="flex items-center gap-3">
