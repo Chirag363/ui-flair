@@ -19,7 +19,7 @@ export function Dashboard() {
           </header>
 
           <main className="flex-1 p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
               {metricsData.map((metric, index) => (
                 <MetricCard
                   key={metric.title}

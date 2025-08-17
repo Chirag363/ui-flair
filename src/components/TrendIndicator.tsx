@@ -9,23 +9,55 @@ interface TrendIndicatorProps {
 
 export function TrendIndicator({ change, trend, colorClass }: TrendIndicatorProps) {
   const isPositive = trend === "up";
+  const iconBgColor = isPositive ? 'rgba(29, 191, 115, 0.16)' : 'rgba(239, 68, 68, 0.16)';
+  const iconColor = isPositive ? '#1DBF73' : '#EF4444';
 
   return (
-    <div className="flex items-center gap-2">
-      <div className={cn(
-        "flex items-center justify-center w-5 h-5 rounded-full",
-        "bg-opacity-16",
-        isPositive ? "bg-green-500" : "bg-red-500"
-      )}>
+    <div className="flex flex-row items-center py-[6.48148px] gap-[6.48px] w-[60.93px] h-[32.41px]">
+      {/* Icon container */}
+      <div 
+        className="flex flex-row justify-center items-center p-[3.24074px] w-[19.44px] h-[19.44px] border-[0.405093px] border-black/[0.02] rounded-[40.5093px]"
+        style={{
+          background: `radial-gradient(125% 125% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), ${iconBgColor}`,
+          backgroundBlendMode: 'overlay, normal',
+        }}
+      >
         {isPositive ? (
-          <TrendingUp className="h-3 w-3 text-green-500" />
+          <TrendingUp 
+            className="w-[12.96px] h-[12.96px]" 
+            style={{
+              background: `radial-gradient(125% 125% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), ${iconColor}`,
+              backgroundBlendMode: 'overlay, normal',
+              color: iconColor
+            }}
+          />
         ) : (
-          <TrendingDown className="h-3 w-3 text-red-500" />
+          <TrendingDown 
+            className="w-[12.96px] h-[12.96px]" 
+            style={{
+              background: `radial-gradient(125% 125% at 50% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), ${iconColor}`,
+              backgroundBlendMode: 'overlay, normal',
+              color: iconColor
+            }}
+          />
         )}
       </div>
-      <span className={cn("text-[10.5px] font-medium leading-[18px]", colorClass, "opacity-60")}>
-        {isPositive ? "+" : ""}{change}
-      </span>
+      
+      {/* Label */}
+      <div className="flex flex-row items-center w-[35px] h-[18px]">
+        <span 
+          className="text-[10.5324px] font-medium leading-[18px] opacity-60"
+          style={{
+            fontFamily: 'Inter Display',
+            background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #161922',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}
+        >
+          {isPositive ? "+" : "-"}{change}
+        </span>
+      </div>
     </div>
   );
 }

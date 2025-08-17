@@ -34,7 +34,7 @@ export const metricsData: MetricData[] = [
 export const metricStyles = {
   active: {
     color: "text-blue-500",
-    bars: [50, 100, 63, 63, 89, 57, 63] as number[],
+    bars: [45, 87, 55, 55, 77, 50, 55] as number[],
   },
   progress: {
     color: "text-orange-500", 
