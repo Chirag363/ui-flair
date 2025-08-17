@@ -12,13 +12,19 @@ export function TrendIndicator({ change, trend, colorClass }: TrendIndicatorProp
 
   return (
     <div className="flex items-center gap-2">
-      {isPositive ? (
-        <TrendingUp className={cn("h-4 w-4", colorClass)} />
-      ) : (
-        <TrendingDown className={cn("h-4 w-4", colorClass)} />
-      )}
-      <span className={cn("text-sm font-medium", colorClass)}>
-        {isPositive ? "+" : "-"}{change}
+      <div className={cn(
+        "flex items-center justify-center w-5 h-5 rounded-full",
+        "bg-opacity-16",
+        isPositive ? "bg-green-500" : "bg-red-500"
+      )}>
+        {isPositive ? (
+          <TrendingUp className="h-3 w-3 text-green-500" />
+        ) : (
+          <TrendingDown className="h-3 w-3 text-red-500" />
+        )}
+      </div>
+      <span className={cn("text-[10.5px] font-medium leading-[18px]", colorClass, "opacity-60")}>
+        {isPositive ? "+" : ""}{change}
       </span>
     </div>
   );
